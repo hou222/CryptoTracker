@@ -7,20 +7,20 @@ function AppLayout() {
 
       <main className="bg-black pt-14 z-20 ">
         <div className=" mx-6 flex  flex-col items-center text-white overflow-hidden">
-          <div className="flex flex-col  gap-4 items-center  py-10 max-w-60 ">
+          <div className="flex flex-col  gap-4 md:gap-10 items-center  py-10 md:py-16 w-60 md:w-[650px] ">
             {/* <div className="bg-blue-500 blur-[70px]   w-[200px] h-[80px] relative "></div> */}
             <p
-              className=" w-[200px]  md:filter-none top-8 text-center font-bold text-3xl  blur-custom
+              className=" w-[200px] md:w-[650px] md:py-5 md:filter-none top-8 text-center font-bold text-3xl md:text-[96px] leading-[110px]  blur-custom
           "
             >
               Crypto taxes done right
             </p>
 
-            <p className=" text-center text-sm font-semibold  px-2">
+            <p className=" text-center text-sm md:text-lg md:w-[380px] font-semibold  px-2">
               Connect your crypto wallets and exchanges to get your optimized
               tax report in minutes.
             </p>
-            <button className="bg-[#0094FF] px-4 py-2 rounded-md text-sm font-semibold text-white cursor-pointer">
+            <button className="bg-[#0094FF] px-4 py-2 md:px-9 md:py-5 md:text-xl rounded-md text-sm font-semibold text-white cursor-pointer">
               Get started for free
             </button>
           </div>
