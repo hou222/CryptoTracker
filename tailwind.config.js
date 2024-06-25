@@ -5,8 +5,11 @@ export default {
     extend: {
       backgroundImage: {
         uni: "url('src/assets/uni.png')",
+        uniWhite: "url('src/assets/uniWhite.png')",
         sea: "url('src/assets/seaBlue.png')",
+        seaWhite: "url('src/assets/seaWhite.png')",
         turbo: "url('src/assets/turbo.png')",
+        turboWhite: "url('src/assets/turboWhite.png')",
       },
     },
   },
