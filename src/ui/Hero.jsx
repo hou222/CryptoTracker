@@ -1,8 +1,8 @@
 function Hero() {
   return (
-    <div className=" pt-14 ">
+    <div className="  md:pt-14 ">
       <div className=" mx-6 flex  flex-col items-center text-white overflow-hidden ">
-        <div className="flex flex-col  gap-4 md:gap-10 items-center  py-10 md:py-16 w-60 md:w-[650px] ">
+        <div className="flex flex-col  gap-4 md:gap-10 items-center  py-10 md:py-16 w-60 md:w-[650px]">
           {/* <div className="bg-blue-500 blur-[70px]   w-[200px] h-[80px] relative "></div> */}
           <p
             className=" w-[200px] md:w-[650px] md:py-5 md:filter-none top-8 text-center font-bold text-3xl md:text-[96px] md:leading-[110px]  blur-custom
