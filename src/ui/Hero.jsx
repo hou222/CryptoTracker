@@ -15,18 +15,18 @@ function Hero() {
             Connect your crypto wallets and exchanges to get your optimized tax
             report in minutes.
           </p>
-          <button className="bg-[#0094FF] px-4 py-2 md:px-9 md:py-5 md:text-xl rounded-md text-sm font-semibold text-white cursor-pointer">
+          <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-4 py-2 md:px-9 md:py-5 md:text-xl rounded-md text-sm font-semibold text-white cursor-pointer">
             Get started for free
           </button>
         </div>
-        <div className=" flex flex-col gap-4 items-center w-60 md:w-full">
+        <div className=" flex flex-col gap-4 items-center w-60 md:w-full  pb-6 md:pb-0">
           <p
             className=" text-center font-semibold text-sm md:text-lg
     "
           >
             The official crypto tax partner of
           </p>
-          <div className="flex flex-wrap justify-center items-end gap-6 md:gap-14 md:pb-5">
+          <div className="flex flex-wrap justify-center items-end gap-6 md:gap-14 md:pb-5 ">
             <div className="text-blue-600 md:text-white font-bold text-xl md:text-3xl md:font-semibold">
               coinbase
             </div>
