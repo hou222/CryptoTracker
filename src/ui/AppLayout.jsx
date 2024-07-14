@@ -13,9 +13,16 @@ function AppLayout() {
       <Hero />
       <div className=" px-4 py-4">
         <div className=" max-w-7xl mx-auto">
-          <p className="text-white text-xl font-semibold py-6">Crypto Prices</p>
+          <p className="text-white text-xl font-semibold py-6 lg:text-4xl">
+            Crypto Prices
+          </p>
           <div className="rounded-t-lg overflow-hidden">
             <Table />
+            <tr className="flex justify-between w-full bg-red-400 ">
+              <div className="w-7 h-7 bg-white rounded-full text-center">1</div>
+              <div className="w-7 h-7 bg-white rounded-full text-center">1</div>
+              <div className="w-7 h-7 bg-white rounded-full text-center">1</div>
+            </tr>
           </div>
         </div>
       </div>
