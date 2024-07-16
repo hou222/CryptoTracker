@@ -1,9 +1,9 @@
-import coin from "../assets/turbo.png";
+import coin from "../../assets/turbo.png";
 
-function TableRow() {
+function CurrencyRow() {
   return (
     <tr className="p-2  border-b">
-      <td className="flex py-2 lg:py-6 items-center gap-3 lg:gap-5 pl-4">
+      <td className="flex py-3 lg:py-6 items-center gap-3 lg:gap-5 pl-4">
         <img src={coin} alt="coin" className="w-7 h-7 lg:w-12 lg:h-12" />
         <p className="text-white text-lg lg:text-xl lg:font-semibold">
           Bitcoin
@@ -26,4 +26,4 @@ function TableRow() {
   );
 }
 
-export default TableRow;
+export default CurrencyRow;
