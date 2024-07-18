@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import CurrencyRow from "./CurrencyRow";
-import { useState } from "react";
 
-function currencyTable() {
+function CurrencyTable() {
   const navigate = useNavigate();
   function handleCoin() {
     navigate("/coindetails");
@@ -32,4 +31,4 @@ function currencyTable() {
   );
 }
 
-export default currencyTable;
+export default CurrencyTable;

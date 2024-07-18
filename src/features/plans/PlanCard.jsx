@@ -1,3 +1,5 @@
+import check from "../../assets/checkW2.png";
+
 function planCard() {
   return (
     <div className="w-[300px] bg-[#eaedf3] rounded-3xl p-6">
@@ -9,17 +11,17 @@ function planCard() {
       <p>Unleash the power of automation with strong bench press.</p>
       <ul className="pt-4 flex flex-col gap-1 text-[#808080] ">
         <li className="flex items-center">
-          <img src="src/assets/checkW2.png" />
+          <img src={check} />
           Multi-step Zaps
         </li>
         <li className="flex items-center">
-          <img src="src/assets/checkW2.png" />3 Premium Apps
+          <img src={check} />3 Premium Apps
         </li>
         <li className="flex items-center">
-          <img src="src/assets/checkW2.png" />2 Users team
+          <img src={check} />2 Users team
         </li>
         <li className="flex items-center">
-          <img src="src/assets/checkW2.png" />
+          <img src={check} />
           200mb Space
         </li>
       </ul>

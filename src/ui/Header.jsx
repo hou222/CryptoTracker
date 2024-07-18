@@ -4,15 +4,20 @@ import NavBar from "./NavBar";
 import MenuButton from "./MenuButton";
 import CloseButton from "./CloseButton";
 import Logo from "./Logo";
+import { useNavigate } from "react-router-dom";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   function handleOpen() {
     setIsOpen((open) => !open);
   }
+  function handleNavigate() {
+    navigate("/home");
+  }
   return (
     <div className="bg-black py-4 px-6 text-white flex justify-between items-center sticky top-0 left-0 right-0 ">
-      <Logo />
+      <Logo handleNavigate={handleNavigate} />
       <NavBar isOpen={isOpen} />
       {/* <nav className="hidden">
           <ul>

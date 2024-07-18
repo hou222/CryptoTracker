@@ -1,4 +1,5 @@
 import PlanCard from "./PlanCard";
+import check from "../../assets/checkW2.png";
 
 function FilterPlans() {
   return (
@@ -33,19 +34,19 @@ function FilterPlans() {
             <p>Advanced tools to take your work to the next level.</p>
             <ul className="pt-4 flex flex-col gap-1 text-[#808080] ">
               <li className="flex items-center">
-                <img src="src/assets/checkW2.png" />
+                <img src={check} />
                 Multi-step Zaps
               </li>
               <li className="flex items-center">
-                <img src="src/assets/checkW2.png" />
+                <img src={check} />
                 Unlimited Premium
               </li>
               <li className="flex items-center">
-                <img src="src/assets/checkW2.png" />
+                <img src={check} />
                 50 Users team
               </li>
               <li className="flex items-center">
-                <img src="src/assets/checkW2.png" />
+                <img src={check} />
                 5gb Space
               </li>
             </ul>
@@ -62,20 +63,20 @@ function FilterPlans() {
             <p>Automation plus enterprisegrade features.</p>
             <ul className="pt-4 flex flex-col gap-1 ">
               <li className="flex items-center">
-                <img src="src/assets/checkW2.png" />
+                <img src={check} />
                 Multi-step Zaps
               </li>
               <li className="flex items-center">
-                <img src="src/assets/checkW2.png" />
+                <img src={check} />
                 Unlimited Premium
               </li>
 
               <li className="flex items-center">
-                <img src="src/assets/checkW2.png" />
+                <img src={check} />
                 25gb Space
               </li>
               <li className="flex items-center">
-                <img src="src/assets/checkW2.png" />
+                <img src={check} />
                 Custom Data Retention
               </li>
             </ul>
