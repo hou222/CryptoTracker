@@ -1,6 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import CurrencyRow from "./CurrencyRow";
+import { useState } from "react";
 
 function currencyTable() {
+  const navigate = useNavigate();
+  function handleCoin() {
+    navigate("/coindetails");
+  }
   return (
     <table className=" w-full ">
       <thead className="bg-gradient-to-r from-blue-500 to-cyan-500">
@@ -20,16 +26,7 @@ function currencyTable() {
         </tr>
       </thead>
       <tbody>
-        <CurrencyRow />
-        <CurrencyRow />
-        <CurrencyRow />
-        <CurrencyRow />
-        <CurrencyRow />
-        <CurrencyRow />
-        <CurrencyRow />
-        <CurrencyRow />
-        <CurrencyRow />
-        <CurrencyRow />
+        <CurrencyRow handleCoin={handleCoin} />
       </tbody>
     </table>
   );
