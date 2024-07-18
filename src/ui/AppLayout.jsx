@@ -12,7 +12,7 @@ function AppLayout() {
         <CryptoPrices />
         <div className="flex flex-col justify-start items-center py-10">
           <div className="flex flex-col justify-start items-center gap-3 px-2 py-10">
-            <p className="text-white text-center text-6xl font-semibold flex flex-wrap justify-center gap-2">
+            <p className="text-white text-center text-6xl md:text-[85px] font-semibold md:font-bold flex flex-wrap justify-center gap-2">
               OUR
               <span className="bg-gradient-to-r from-cyan-500 to-blue-700 cursor-pointer text-transparent bg-clip-text">
                 PRICING
@@ -23,8 +23,8 @@ function AppLayout() {
               we’re here to help you scale.
             </p>
           </div>
-          <div className=" bg-red-500 w-full flex flex-col items-center">
-            <div className="w-fit bg-white flex rounded-full text-lg ">
+          <div className=" w-full flex flex-col items-center gap-6">
+            <div className="w-fit bg-[#eaedf3] flex rounded-full text-lg ">
               <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full px-6 py-2 text-white cursor-pointer">
                 MONTHLY
               </div>
@@ -32,24 +32,93 @@ function AppLayout() {
                 YEARLY
               </div>
             </div>
-            <div className="w-full grid bg-yellow-300 grid-cols-1 text-base ">
-              <div className=" bg-white rounded-xl p-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-base justify-center items-cente">
+              <div className="w-[300px] bg-[#eaedf3] rounded-3xl p-6">
                 <div className="flex items-end">
                   <p className="text-3xl font-semibold">$19</p>
                   <p>/month</p>
                 </div>
-                <div>Starter</div>
+                <div className="text-3xl font-semibold">Starter</div>
                 <p>Unleash the power of automation with strong bench press.</p>
-                <ul>
-                  <li>Multi-step Zaps</li>
-                  <li>3 Premium Apps</li>
-                  <li>2 Users team</li>
-                  <li>200mb Space</li>
+                <ul className="pt-4 flex flex-col gap-1 text-[#808080] ">
+                  <li className="flex items-center">
+                    <img src="src/assets/checkW2.png" />
+                    Multi-step Zaps
+                  </li>
+                  <li className="flex items-center">
+                    <img src="src/assets/checkW2.png" />3 Premium Apps
+                  </li>
+                  <li className="flex items-center">
+                    <img src="src/assets/checkW2.png" />2 Users team
+                  </li>
+                  <li className="flex items-center">
+                    <img src="src/assets/checkW2.png" />
+                    200mb Space
+                  </li>
                 </ul>
-                <button className="bg-blue-500">Choose plans</button>
+                <button className="bg-[#4b87b8] w-full rounded-full py-[6px] mt-3 text-white">
+                  Choose plan
+                </button>
               </div>
-              <div>1</div>
-              <div>1</div>
+              <div className="w-[300px] bg-[#eaedf3] rounded-3xl p-6">
+                <div className="flex items-end">
+                  <p className="text-3xl font-semibold">$54</p>
+                  <p>/month</p>
+                </div>
+                <div className="text-3xl font-semibold">Professional</div>
+                <p>Advanced tools to take your work to the next level.</p>
+                <ul className="pt-4 flex flex-col gap-1 text-[#808080] ">
+                  <li className="flex items-center">
+                    <img src="src/assets/checkW2.png" />
+                    Multi-step Zaps
+                  </li>
+                  <li className="flex items-center">
+                    <img src="src/assets/checkW2.png" />
+                    Unlimited Premium
+                  </li>
+                  <li className="flex items-center">
+                    <img src="src/assets/checkW2.png" />
+                    50 Users team
+                  </li>
+                  <li className="flex items-center">
+                    <img src="src/assets/checkW2.png" />
+                    5gb Space
+                  </li>
+                </ul>
+                <button className="bg-[#4b87b8] w-full rounded-full py-[6px] mt-3 text-white">
+                  Choose plan
+                </button>
+              </div>
+              <div className="w-[300px] bg-[#1E1F2A;] border-2 border-white text-white rounded-3xl p-6">
+                <div className="flex items-end">
+                  <p className="text-3xl font-semibold">$89</p>
+                  <p>/month</p>
+                </div>
+                <div className="text-3xl font-semibold">Company</div>
+                <p>Automation plus enterprisegrade features.</p>
+                <ul className="pt-4 flex flex-col gap-1 ">
+                  <li className="flex items-center">
+                    <img src="src/assets/checkW2.png" />
+                    Multi-step Zaps
+                  </li>
+                  <li className="flex items-center">
+                    <img src="src/assets/checkW2.png" />
+                    Unlimited Premium
+                  </li>
+
+                  <li className="flex items-center">
+                    <img src="src/assets/checkW2.png" />
+                    25gb Space
+                  </li>
+                  <li className="flex items-center">
+                    <img src="src/assets/checkW2.png" />
+                    Custom Data Retention
+                  </li>
+                </ul>
+                <button className="bg-[#4b87b8] w-full rounded-full py-[6px] mt-3 text-white">
+                  Choose plan
+                </button>
+              </div>
             </div>
           </div>
         </div>
