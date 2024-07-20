@@ -1,25 +1,26 @@
 import { useNavigate } from "react-router-dom";
 import CurrencyRow from "./CurrencyRow";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function CurrencyTable() {
   const navigate = useNavigate();
+  const [data, setData] = useState([]);
+  const url =
+    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=price_change_percentage_24h&per_page=5&page=1&sparkline=false&locale=en";
   useEffect(() => {
-    fetch(
-      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=price_change_percentage_24h&per_page=100&page=1&sparkline=false&locale=en"
-    )
-      /* fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd") */
-      /* fetch(
-      "https://api.coingecko.com/api/v3/coins/bitcoin/history?x_cg_demo_api_key=CG-mFGHLKs4RYfbnCQ3aMtfWeS4"
-    ) */
-      .then((response) => response.json())
-      .then((response) => console.log(response))
-      .catch((err) => console.error(err));
+    async function fetchData() {
+      const res = await fetch(url);
+
+      const data = await res.json();
+
+      setData(data);
+    }
+    fetchData();
   }, []);
   function handleCoin() {
     navigate("/coindetails");
   }
-
+  //console.log(data);
   return (
     <table className=" w-full ">
       <thead className="bg-gradient-to-r from-blue-500 to-cyan-500">
@@ -39,9 +40,12 @@ function CurrencyTable() {
         </tr>
       </thead>
       <tbody>
-        <CurrencyRow handleCoin={handleCoin} />
-        <CurrencyRow handleCoin={handleCoin} />
-        <CurrencyRow handleCoin={handleCoin} />
+        {data?.length > 0 &&
+          data.map((data) => (
+            <CurrencyRow handleCoin={handleCoin} data={data} key={data.id} />
+          ))}
+        {/* <CurrencyRow handleCoin={handleCoin} />
+        <CurrencyRow handleCoin={handleCoin} /> */}
       </tbody>
     </table>
   );
