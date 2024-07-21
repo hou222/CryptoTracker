@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #eaedf3;
+@layer base {
+  a {
+    @apply underline;
+    @apply underline-offset-1;
+    @apply font-bold;
+  }
+
+  /* ... */
 }

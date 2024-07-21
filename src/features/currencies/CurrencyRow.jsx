@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
+
 function CurrencyRow({ handleCoin, data }) {
-  console.log(data);
   return (
     <tr className="p-2  border-b cursor-pointer" onClick={handleCoin}>
       <td className="flex py-3 lg:py-6 items-center gap-3 lg:gap-5 pl-4">

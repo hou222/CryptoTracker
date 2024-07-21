@@ -11,7 +11,7 @@ function App() {
           <Route element={<AppLayout />}>
             <Route index element={<Navigate replace to="home" />} />
             <Route path="home" element={<Home />} />
-            <Route path="coindetails" element={<CoinDetails />} />
+            <Route path="coindetails/:id" element={<CoinDetails />} />
           </Route>
         </Routes>
       </BrowserRouter>

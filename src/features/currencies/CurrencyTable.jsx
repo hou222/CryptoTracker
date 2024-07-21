@@ -20,9 +20,6 @@ function CurrencyTable({ page }) {
 
   function priceFormat(price) {}
 
-  function handleCoin() {
-    navigate("/coindetails");
-  }
   //console.log(data);
   return (
     <table className=" w-full ">
@@ -46,7 +43,11 @@ function CurrencyTable({ page }) {
       <tbody>
         {data?.length > 0 &&
           data.map((data) => (
-            <CurrencyRow handleCoin={handleCoin} data={data} key={data.id} />
+            <CurrencyRow
+              handleCoin={() => navigate(`/coindetails/${data.id}`)}
+              data={data}
+              key={data.id}
+            />
           ))}
         {/* <CurrencyRow handleCoin={handleCoin} />
         <CurrencyRow handleCoin={handleCoin} /> */}
