@@ -10,7 +10,7 @@ function CryptoPrices() {
         Crypto Prices
       </p>
       <div className="rounded-t-lg overflow-hidden">
-        <CurrencyTable />
+        <CurrencyTable page={page} />
         <div className="flex justify-center items-center gap-3 lg:gap-6 w-full py-5 lg:py-10">
           {totalPages.map((pageNum) => (
             <div

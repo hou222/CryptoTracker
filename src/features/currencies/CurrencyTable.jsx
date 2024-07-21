@@ -6,7 +6,7 @@ function CurrencyTable({ page }) {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
 
-  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=price_change_percentage_24h&per_page=5&page=${page}&sparkline=false&locale=en`;
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=price_change_percentage_24h&per_page=10&page=${page}&sparkline=false&locale=en`;
   useEffect(() => {
     async function fetchData() {
       const res = await fetch(url);
@@ -16,7 +16,10 @@ function CurrencyTable({ page }) {
       setData(data);
     }
     fetchData();
-  }, []);
+  }, [url]);
+
+  function priceFormat(price) {}
+
   function handleCoin() {
     navigate("/coindetails");
   }
@@ -39,6 +42,7 @@ function CurrencyTable({ page }) {
           </th>
         </tr>
       </thead>
+
       <tbody>
         {data?.length > 0 &&
           data.map((data) => (
