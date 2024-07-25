@@ -1,11 +1,12 @@
-import Chart from "chart.js/auto";
+import { Chart as ChartJS, defaults } from "chart.js/auto";
 import { useState } from "react";
 
 import { Line } from "react-chartjs-2";
 
 import DurationButton from "./DurationButton";
-function ChartBox({ prices }) {
-  const [selected, setSelected] = useState(null);
+function ChartBox({ prices, selected, setSelected }) {
+  defaults.maintainAspectRatio = false;
+  defaults.responsive = true;
   const data = {
     labels: prices.map((dataPoint) => getTime(dataPoint[0])),
     datasets: [
@@ -26,11 +27,12 @@ function ChartBox({ prices }) {
 
   function getTime(time) {
     const date = new Date(time).toLocaleDateString();
+
     return date;
   }
 
   return (
-    <div className=" w-full h-[175px] my-6">
+    <div className=" w-full h-[375px] lg:h-[500px] mt-6 mb-20 max-w-7xl mx-auto">
       <div className="flex text-[#acacac] text-xs gap-6 justify-center p-3">
         {durations.map((duration, index) => (
           <DurationButton

@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 function CurrencyRow({ handleCoin, data }) {
   return (
     <tr className="p-2  border-b cursor-pointer" onClick={handleCoin}>
@@ -19,7 +17,9 @@ function CurrencyRow({ handleCoin, data }) {
       <td className="w-20 py-2 ">
         <div
           className={`text-white font-semibold text-sm lg:text-base  ${
-            data.price_change_percentage_24h > 0 ? "bg-green-600" : "bg-red-600"
+            data?.price_change_percentage_24h > 0
+              ? "bg-green-600"
+              : "bg-red-600"
           } px-2 py-[2px] lg:py-1 lg:px-3 rounded-sm w-fit mx-auto lg:mr-0`}
         >
           {data.price_change_percentage_24h > 0 && "+"}

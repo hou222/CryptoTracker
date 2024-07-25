@@ -1,7 +1,10 @@
-export async function getPrices(id) {
+export async function getPrices(id, days) {
   const res = await fetch(
-    `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=300&interval=daily`
+    `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=${days}`
   );
+  /* const res = await fetch(
+    `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=${days}&interval=daily`
+  ); */
 
   const data = await res.json();
   //console.log(data);
