@@ -6,7 +6,10 @@ function CryptoPrices() {
   const totalPages = [1, 2, 3, 4, 5];
   return (
     <div className=" max-w-7xl mx-auto pb-5">
-      <p className="text-white text-xl font-semibold py-6 lg:text-4xl">
+      <p
+        className="text-white text-xl font-semibold py-6 lg:text-4xl"
+        id="market"
+      >
         Crypto Prices
       </p>
       <div className="rounded-t-lg overflow-hidden">

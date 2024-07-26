@@ -16,7 +16,7 @@ function Hero() {
             report in minutes.
           </p>
           <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-4 py-2 md:px-9 md:py-5 md:text-xl rounded-md text-sm font-semibold text-white cursor-pointer">
-            Get started for free
+            <a href="#market">Get started for free</a>
           </button>
         </div>
         <div className=" flex flex-col gap-4 items-center w-60 md:w-full  pb-6 md:pb-0">

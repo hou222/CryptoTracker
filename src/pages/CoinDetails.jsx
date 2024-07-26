@@ -9,8 +9,8 @@ import { ScrollToTop } from "../utils/ScrollToTop";
 function CoinDetails() {
   const [details, setDetails] = useState([]);
   const [prices, setPrices] = useState([]);
-  const [days, setDays] = useState(7);
-  const [selected, setSelected] = useState(5);
+  const [days, setDays] = useState(1);
+  const [selected, setSelected] = useState(0);
   const { id } = useParams();
   ScrollToTop();
   const chartDuration = useCallback(() => {
@@ -38,13 +38,12 @@ function CoinDetails() {
   useEffect(() => {
     async function getInformations() {
       const data = await getData(id);
-
+      console.log(data);
       if (data) {
         setDetails(data);
         chartDuration();
         const prices = await getPrices(id, days);
         setPrices(prices);
-        console.log(prices);
 
         //console.log(getTime(prices[0].at(0)));
       }
@@ -100,7 +99,12 @@ function CoinDetails() {
         Market Cap: <span className="font-normal">$0,000,000M</span>
       </p> */}
 
-      <ChartBox prices={prices} selected={selected} setSelected={setSelected} />
+      <ChartBox
+        prices={prices}
+        selected={selected}
+        setSelected={setSelected}
+        days={days}
+      />
       {/* <div
         className="py-3 h-[100px] overflow-y-scroll "
         dangerouslySetInnerHTML={{

@@ -1,10 +1,10 @@
 import check from "../../assets/checkW2.png";
 
-function planCard() {
+function planCard({ plans }) {
   return (
     <div className="w-[300px] bg-[#eaedf3] rounded-3xl p-6">
       <div className="flex items-end">
-        <p className="text-3xl font-semibold">$19</p>
+        <p className="text-3xl font-semibold">${plans ? "19" : "70"}</p>
         <p>/month</p>
       </div>
       <div className="text-3xl font-semibold">Starter</div>

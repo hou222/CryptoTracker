@@ -1,9 +1,17 @@
 import PlanCard from "./PlanCard";
 import check from "../../assets/checkW2.png";
+import { useState } from "react";
 
 function FilterPlans() {
+  const [plans, setPlans] = useState(true);
+  function handlePlans() {
+    setPlans((plans) => !plans);
+  }
   return (
-    <div className="flex flex-col justify-start items-center py-10">
+    <div
+      className="flex flex-col justify-start items-center py-10"
+      id="pricing"
+    >
       <div className="flex flex-col justify-start items-center gap-3 px-2 py-10">
         <p className="text-white text-center text-6xl md:text-[85px] font-semibold md:font-bold flex flex-wrap justify-center gap-2">
           OUR
@@ -18,16 +26,32 @@ function FilterPlans() {
       </div>
       <div className=" w-full flex flex-col items-center gap-6">
         <div className="w-fit bg-[#eaedf3] flex rounded-full text-lg ">
-          <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full px-6 py-2 text-white cursor-pointer">
+          <div
+            className={`${
+              plans
+                ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white"
+                : ""
+            } rounded-full px-6 py-2  cursor-pointer`}
+            onClick={handlePlans}
+          >
             MONTHLY
           </div>
-          <div className="rounded-full  px-6 py-2 cursor-pointer">YEARLY</div>
+          <div
+            className={`${
+              !plans
+                ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white"
+                : ""
+            } rounded-full  px-6 py-2 cursor-pointer`}
+            onClick={handlePlans}
+          >
+            YEARLY
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-base justify-center items-cente">
-          <PlanCard />
+          <PlanCard plans={plans} />
           <div className="w-[300px] bg-[#eaedf3] rounded-3xl p-6">
             <div className="flex items-end">
-              <p className="text-3xl font-semibold">$54</p>
+              <p className="text-3xl font-semibold">${plans ? "54" : "200"}</p>
               <p>/month</p>
             </div>
             <div className="text-3xl font-semibold">Professional</div>
@@ -56,7 +80,7 @@ function FilterPlans() {
           </div>
           <div className="w-[300px] bg-[#1E1F2A;] border-2 border-white text-white rounded-3xl p-6">
             <div className="flex items-end">
-              <p className="text-3xl font-semibold">$89</p>
+              <p className="text-3xl font-semibold">${plans ? "89" : "320"}</p>
               <p>/month</p>
             </div>
             <div className="text-3xl font-semibold">Company</div>

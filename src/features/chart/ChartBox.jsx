@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Line } from "react-chartjs-2";
 
 import DurationButton from "./DurationButton";
-function ChartBox({ prices, selected, setSelected }) {
+function ChartBox({ prices, selected, setSelected, days }) {
   defaults.maintainAspectRatio = false;
   defaults.responsive = true;
   const data = {
@@ -26,13 +26,19 @@ function ChartBox({ prices, selected, setSelected }) {
   const durations = ["24H", "1W", "1M", "3M", "6M", "1Y"];
 
   function getTime(time) {
-    const date = new Date(time).toLocaleDateString();
+    const date = new Date(time);
+    if (days === 1) {
+      const hours = date.getHours();
+      const minutes = date.getMinutes();
 
-    return date;
+      return `${hours}:${minutes}`;
+    }
+
+    return date.toLocaleDateString();
   }
 
   return (
-    <div className=" w-full h-[375px] lg:h-[500px] mt-6 mb-20 max-w-7xl mx-auto">
+    <div className=" w-full h-[400px] lg:h-[500px] mt-6 mb-20 max-w-7xl mx-auto">
       <div className="flex text-[#acacac] text-xs gap-6 justify-center p-3">
         {durations.map((duration, index) => (
           <DurationButton
@@ -44,13 +50,6 @@ function ChartBox({ prices, selected, setSelected }) {
             {duration}
           </DurationButton>
         ))}
-
-        {/* <DurationButton>24H</DurationButton>
-        <DurationButton>1W</DurationButton>
-        <DurationButton>1M</DurationButton>
-        <DurationButton>3M</DurationButton>
-        <DurationButton>6M</DurationButton>
-        <DurationButton>1Y</DurationButton> */}
       </div>
       <Line data={data}></Line>
     </div>

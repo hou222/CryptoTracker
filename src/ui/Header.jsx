@@ -29,7 +29,7 @@ function Header() {
         </nav> */}
       <div className="flex gap-3 items-center">
         <button className="bg-gradient-to-r from-blue-500 to-cyan-500 px-3 py-[6px] rounded-md text-xs font-semibold text-black cursor-pointer">
-          Try if free
+          <a href="#market">Try if free</a>
         </button>
         {isOpen ? (
           <CloseButton handleOpen={handleOpen} />

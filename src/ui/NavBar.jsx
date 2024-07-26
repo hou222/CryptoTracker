@@ -11,9 +11,15 @@ function NavBar({ isOpen }) {
       } lg:transform-none lg:static lg:bg-yellow-500 lg:overflow-visible `}
     > */}
       <ul className="flex flex-col items-center gap-5 py-10 lg:flex-row lg:gap-11">
-        <li className="cursor-pointer hover:text-white">Home</li>
-        <li className="cursor-pointer hover:text-white">Market</li>
-        <li className="cursor-pointer hover:text-white">Our Pricing</li>
+        <li className="cursor-pointer hover:text-white">
+          <a href="#">Home</a>
+        </li>
+        <li className="cursor-pointer hover:text-white">
+          <a href="#market">Market</a>
+        </li>
+        <li className="cursor-pointer hover:text-white">
+          <a href="#pricing">Our Pricing</a>
+        </li>
         <li className="cursor-pointer hover:text-white">Join</li>
       </ul>
     </nav>
