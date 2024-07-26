@@ -60,8 +60,10 @@ function CoinDetails() {
           />
           <div className=" flex gap-3 items-end ">
             <p className=" text-2xl font-semibold">
-              BNB Price
-              <span className="text-[#c9c9c9] text-xs px-2">BNB</span>
+              {details.symbol?.toUpperCase()} Price
+              <span className="text-[#c9c9c9] text-xs px-2">
+                {details.symbol?.toUpperCase()}
+              </span>
             </p>
           </div>
         </div>
