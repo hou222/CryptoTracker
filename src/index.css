@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.example-button {
+/* .example-button {
   background-color: rgb(86, 1, 245);
   color: white;
   font-size: 1.8rem;
@@ -10,4 +10,8 @@
   border: none;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
+} */
+
+body {
+  background-color: #10111c;
 }

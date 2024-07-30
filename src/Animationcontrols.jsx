@@ -1,4 +1,10 @@
+import { motion, useAnimationControls } from "framer-motion";
 function Animationcontrols() {
+  const controls = useAnimationControls();
+  function handleClick() {
+    controls.start("flip");
+  }
+
   return (
     <div
       style={{
@@ -8,14 +14,26 @@ function Animationcontrols() {
         gap: "0.8rem",
       }}
     >
-      <button className="example-button">Flip it!</button>
-      <div
+      <button className="example-button" onClick={handleClick}>
+        Flip it!
+      </button>
+      <motion.div
         style={{
           width: 150,
           height: 150,
           background: "black",
         }}
-      ></div>
+        variants={{
+          initial: {
+            rotate: "0deg",
+          },
+          flip: {
+            rotate: "360deg",
+          },
+        }}
+        initial="initial"
+        animate={controls}
+      ></motion.div>
     </div>
   );
 }

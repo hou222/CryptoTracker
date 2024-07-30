@@ -1,13 +1,17 @@
-import Animationcontrols from "./Animationcontrols";
+/* import Animationcontrols from "./Animationcontrols";
 import BasicsOfMotion from "./BasicsOfMotion";
 import Gestures from "./Gestures";
+import ScrollAnimations from "./ScrollAnimations";
+import ViewBaseAnimations from "./ViewBaseAnimations"; */
 
 function Framer() {
   return (
     <div>
       {/* <BasicsOfMotion /> */}
       {/* <Gestures /> */}
-      <Animationcontrols />
+      {/* <Animationcontrols /> */}
+      {/* <ViewBaseAnimations /> */}
+      {/* <ScrollAnimations /> */}
     </div>
   );
 }

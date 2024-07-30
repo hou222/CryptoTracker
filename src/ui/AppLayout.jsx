@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 function AppLayout() {
   return (
-    <div className="bg-black">
+    <div className="bg-[#10111C]">
       <Header />
       <Outlet />
       <Footer />

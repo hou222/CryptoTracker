@@ -3,6 +3,7 @@ import CurrencyTable from "../features/currencies/CurrencyTable";
 
 function CryptoPrices() {
   const [page, setPage] = useState(1);
+
   const totalPages = [1, 2, 3, 4, 5];
   return (
     <div className=" max-w-7xl mx-auto pb-5">

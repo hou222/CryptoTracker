@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import CurrencyRow from "./CurrencyRow";
 import { useEffect, useState } from "react";
+import Loading from "../../ui/Loading";
 
 function CurrencyTable({ page }) {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=price_change_percentage_24h&per_page=10&page=${page}&sparkline=false&locale=en`;
   useEffect(() => {
@@ -14,6 +16,7 @@ function CurrencyTable({ page }) {
       const data = await res.json();
 
       setData(data);
+      setLoading(false);
     }
     fetchData();
   }, [url]);
@@ -42,13 +45,18 @@ function CurrencyTable({ page }) {
 
       <tbody>
         {data?.length > 0 &&
-          data.map((data) => (
-            <CurrencyRow
-              handleCoin={() => navigate(`/coindetails/${data.id}`)}
-              data={data}
-              key={data.id}
-            />
-          ))}
+          data.map((data) =>
+            loading ? (
+              <Loading key={data} />
+            ) : (
+              <CurrencyRow
+                handleCoin={() => navigate(`/coindetails/${data.id}`)}
+                data={data}
+                key={data.id}
+                loading={loading}
+              />
+            )
+          )}
         {/* <CurrencyRow handleCoin={handleCoin} />
         <CurrencyRow handleCoin={handleCoin} /> */}
       </tbody>

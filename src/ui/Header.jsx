@@ -16,7 +16,7 @@ function Header() {
     navigate("/home");
   }
   return (
-    <div className="bg-black py-4 px-6 text-white flex justify-between items-center sticky top-0 left-0 right-0 ">
+    <div className="bg-[#10111C] py-4 px-6 text-white flex justify-between items-center sticky top-0 left-0 right-0 z-40">
       <Logo handleNavigate={handleNavigate} />
       <NavBar isOpen={isOpen} />
       {/* <nav className="hidden">
