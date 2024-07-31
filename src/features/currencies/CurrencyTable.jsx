@@ -6,22 +6,24 @@ import Loading from "../../ui/Loading";
 function CurrencyTable({ page }) {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=price_change_percentage_24h&per_page=10&page=${page}&sparkline=false&locale=en`;
   useEffect(() => {
+    setIsLoading(true);
     async function fetchData() {
       const res = await fetch(url);
 
       const data = await res.json();
 
       setData(data);
-      setLoading(false);
+      setIsLoading(false);
+      //setLoading(false);
     }
     fetchData();
   }, [url]);
 
-  function priceFormat(price) {}
+  //function priceFormat(price) {}
 
   //console.log(data);
   return (
@@ -42,23 +44,18 @@ function CurrencyTable({ page }) {
           </th>
         </tr>
       </thead>
-
       <tbody>
-        {data?.length > 0 &&
-          data.map((data) =>
-            loading ? (
-              <Loading key={data} />
-            ) : (
+        {isLoading
+          ? [...Array(10)].map((key) => <Loading key={key} />)
+          : data?.length > 0 &&
+            data.map((data) => (
               <CurrencyRow
                 handleCoin={() => navigate(`/coindetails/${data.id}`)}
                 data={data}
                 key={data.id}
-                loading={loading}
+                loading={isLoading}
               />
-            )
-          )}
-        {/* <CurrencyRow handleCoin={handleCoin} />
-        <CurrencyRow handleCoin={handleCoin} /> */}
+            ))}
       </tbody>
     </table>
   );
