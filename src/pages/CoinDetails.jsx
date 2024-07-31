@@ -7,6 +7,7 @@ import ChartBox from "../features/chart/ChartBox";
 import { ScrollToTop } from "../utils/ScrollToTop";
 import ChartRowDetails from "../features/chart/ChartRowDetails";
 import LoadingDetails from "../features/chart/LoadingDetails";
+import ChartLoading from "../features/chart/ChartLoading";
 //import parse from "html-react-parser";
 function CoinDetails() {
   const [details, setDetails] = useState([]);
@@ -14,6 +15,7 @@ function CoinDetails() {
   const [days, setDays] = useState(1);
   const [selected, setSelected] = useState(0);
   const [isLoading1, setIsLoading1] = useState(false);
+  const [isLoading2, setIsLoading2] = useState(false);
   const { id } = useParams();
   ScrollToTop();
   const chartDuration = useCallback(() => {
@@ -40,6 +42,7 @@ function CoinDetails() {
 
   useEffect(() => {
     setIsLoading1(true);
+    setIsLoading2(true);
     async function getInformations() {
       const data = await getData(id);
       if (data) {
@@ -48,6 +51,7 @@ function CoinDetails() {
         chartDuration();
         const prices = await getPrices(id, days);
         setPrices(prices);
+        setIsLoading2(false);
 
         //console.log(getTime(prices[0].at(0)));
       }
@@ -65,12 +69,16 @@ function CoinDetails() {
         Market Cap: <span className="font-normal">$0,000,000M</span>
       </p> */}
 
-      <ChartBox
-        prices={prices}
-        selected={selected}
-        setSelected={setSelected}
-        days={days}
-      />
+      {isLoading2 ? (
+        <ChartLoading />
+      ) : (
+        <ChartBox
+          prices={prices}
+          selected={selected}
+          setSelected={setSelected}
+          days={days}
+        />
+      )}
       {/* <div
         className="py-3 h-[100px] overflow-y-scroll "
         dangerouslySetInnerHTML={{
