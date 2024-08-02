@@ -1,48 +1,26 @@
 import { useRef } from "react";
-import img from "../assets/seaBlue.png";
-import { motion, useScroll, useTransform } from "framer-motion";
+import HeroMotion from "../features/motions/HeroMotion";
+import { useScroll, useTransform } from "framer-motion";
 function Hero() {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start end", "end start"],
   });
-
   const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "3000deg"]);
-  /* function useParallax(value, distance) {
-    return 
-  } */
-
-  const y = useTransform(scrollYProgress, [0, 1], [-3500, 500]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 1000]);
   return (
-    <div className="  md:pt-14 ">
-      <div className=" mx-6 flex  flex-col items-center text-white overflow-hidden ">
-        <motion.img
-          ref={targetRef}
-          style={{ y, rotate }}
-          src={img}
-          alt="coin"
-          className="w-5 h-5  left-6 top-16 absolute  z-20"
-        />
-        {/* <motion.img
-          ref={targetRef}
-          style={{ y, rotate }}
-          src={img}
-          alt="coin"
-          className="w-10 h-10  left-24 top-60 absolute  z-20"
-        />
-        <motion.img
-          ref={targetRef}
-          style={{ y, rotate }}
-          src={img}
-          alt="coin"
-          className="w-10 h-10  right-6 top-44 absolute  z-20"
-        /> */}
+    <div className="md:pt-14">
+      <div
+        ref={targetRef}
+        className=" mx-6 flex relative flex-col items-center text-white overflow-hidden "
+      >
+        <HeroMotion rotate={rotate} y={y} />
 
-        <div className="flex flex-col  gap-4 md:gap-10 items-center  py-10 md:py-16 w-60 md:w-[650px] z-30">
-          {/* <div className="bg-blue-500 blur-[70px]   w-[200px] h-[80px] relative "></div> */}
+        <div className="flex flex-col  gap-4 md:gap-10 items-center  py-10 md:py-16 w-60 md:w-[650px] z-30 ">
+          <div className="bg-blue-500 blur-[70px] md:blur-[90px]  w-[250px] h-[35px]  absolute top-20 md:top-40 md:w-[600px] md:h-[100px]"></div>
           <p
-            className=" w-[200px] md:w-[650px] md:py-5 md:filter-none top-8 text-center font-bold text-3xl md:text-[96px] md:leading-[110px]  blur-custom
+            className=" w-[200px] md:w-[650px] md:py-5 md:filter-none top-8 text-center font-bold text-3xl md:text-[96px] md:leading-[110px] z-30 
     "
           >
             Crypto taxes done right
