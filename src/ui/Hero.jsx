@@ -64,7 +64,6 @@ function Hero() {
                 className={`bg-turbo md:bg-turboWhite bg-no-repeat bg-cover w-6 h-6 md:w-8 md:h-8`}
               ></div>
               <div className="flex flex-col">
-                {/* <div className=" text-[10px] absolute z-0">inTuiT</div> */}
                 <div className=" font-semibold pt-[6px]">turbotax</div>
               </div>
             </div>

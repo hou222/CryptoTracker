@@ -18,14 +18,10 @@ function CurrencyTable({ page }) {
 
       setData(data);
       setIsLoading(false);
-      //setLoading(false);
     }
     fetchData();
   }, [url]);
 
-  //function priceFormat(price) {}
-
-  //console.log(data);
   return (
     <table className=" w-full ">
       <thead className="bg-gradient-to-r from-blue-500 to-cyan-500">

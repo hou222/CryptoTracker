@@ -8,7 +8,7 @@ import { ScrollToTop } from "../utils/ScrollToTop";
 import ChartRowDetails from "../features/chart/ChartRowDetails";
 import LoadingDetails from "../features/chart/LoadingDetails";
 import ChartLoading from "../features/chart/ChartLoading";
-//import parse from "html-react-parser";
+
 function CoinDetails() {
   const [details, setDetails] = useState([]);
   const [prices, setPrices] = useState([]);
@@ -52,8 +52,6 @@ function CoinDetails() {
         const prices = await getPrices(id, days);
         setPrices(prices);
         setIsLoading2(false);
-
-        //console.log(getTime(prices[0].at(0)));
       }
     }
     getInformations();
@@ -61,13 +59,6 @@ function CoinDetails() {
   return (
     <div className=" w-full text-white px-4">
       {isLoading1 ? <LoadingDetails /> : <ChartRowDetails details={details} />}
-
-      {/* <p className="font-bold text-2xl py-2">
-        Current Price: <span className="font-normal">$00,000</span>
-      </p>
-      <p className="font-bold text-2xl py-2">
-        Market Cap: <span className="font-normal">$0,000,000M</span>
-      </p> */}
 
       {isLoading2 ? (
         <ChartLoading />
@@ -79,12 +70,6 @@ function CoinDetails() {
           days={days}
         />
       )}
-      {/* <div
-        className="py-3 h-[100px] overflow-y-scroll "
-        dangerouslySetInnerHTML={{
-          __html: details.description ? details.description.en : "",
-        }}
-      ></div> */}
     </div>
   );
 }

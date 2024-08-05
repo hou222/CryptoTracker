@@ -7,7 +7,7 @@ function CurrencyRow({ handleCoin, data }) {
           {data.name}
         </p>
       </td>
-      {/* <div className="flex  items-end justify-center gap-1 bg-green-500"> */}
+
       <td className="font-semibold py-2 w-24 text-start lg:text-end text-white lg:text-xl">
         {data.current_price.toLocaleString("en-US", {
           style: "currency",
@@ -32,7 +32,6 @@ function CurrencyRow({ handleCoin, data }) {
           currency: "USD",
         })}
       </td>
-      {/* </div> */}
     </tr>
   );
 }

@@ -29,24 +29,6 @@ function CryptoPrices() {
               {pageNum}
             </div>
           ))}
-          {/* <div
-            className="w-7 h-7 lg:w-10 lg:h-10 text-white rounded-full flex justify-center items-center bg-gradient-to-r from-cyan-600 to-blue-600 cursor-pointer"
-            onClick={() => setPage((page) => page++)}
-          >
-            1
-          </div>
-          <div className="w-7 h-7 lg:w-10 lg:h-10 bg-[#efefef] rounded-full text-center flex justify-center items-center cursor-pointer">
-            2
-          </div>
-          <div className="w-7 h-7 lg:w-10 lg:h-10 bg-[#efefef]  rounded-full text-center flex justify-center items-center cursor-pointer">
-            3
-          </div>
-          <div className="w-7 h-7 lg:w-10 lg:h-10 bg-[#efefef]  rounded-full text-center flex justify-center items-center cursor-pointer">
-            4
-          </div>
-          <div className="w-7 h-7 lg:w-10 lg:h-10 bg-[#efefef]  rounded-full text-center flex justify-center items-center cursor-pointer">
-            5
-          </div> */}
         </div>
       </div>
     </div>

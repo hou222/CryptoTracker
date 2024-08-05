@@ -1,5 +1,4 @@
 import img from "../../assets/seaBlue.png";
-//import img2 from "../../assets/turbo.png";
 import binance from "../../assets/binance.png";
 import uniswap from "../../assets/uniswap.png";
 import bitcoin from "../../assets/bitcoin.png";
@@ -43,10 +42,7 @@ function HeroMotion({ rotate, y }) {
         alt="coin"
         className="w-[14px] h-[14px] absolute top-16 left-12 md:top-[480px] md:left-24 lg:left-36 md:w-12 md:h-12 z-20"
       />
-      {/* ///////////////////////////////////////////////////////
-      ///////////////////////////////////////////////////////
-      ///////////////////////////////////////////////////////
-      /////////////////////////////////////////////////////// */}
+
       <motion.img
         style={{ rotate, y }}
         src={bitcoin}
@@ -77,60 +73,6 @@ function HeroMotion({ rotate, y }) {
         alt="coin"
         className="w-[14px] h-[14px] absolute top-16 right-12 md:top-[480px] md:right-24 lg:right-36 md:w-12 md:h-12 z-20"
       />
-      {/* <motion.img
-        style={{ y, rotate }}
-        src={img2}
-        alt="coin"
-        className="w-4 h-4 lg:w-12 lg:h-12  absolute  z-20"
-      />
-      <motion.img
-        style={{ y, rotate }}
-        src={img}
-        alt="coin"
-        className="w-4 h-4   absolute  z-20"
-      />
-      <motion.img
-        style={{ y, rotate }}
-        src={img}
-        alt="coin"
-        className="w-4 h-4 lg:w-14 lg:h-14 absolute  z-20"
-      />
-      <motion.img
-        style={{ y, rotate }}
-        src={img2}
-        alt="coin"
-        className="w-4 h-4 lg:w-12 lg:h-12 absolute  z-20"
-      />
-      <motion.img
-        style={{ y, rotate }}
-        src={img}
-        alt="coin"
-        className="w-4 h-4 lg:w-14 lg:h-14   absolute  z-20"
-      />
-      <motion.img
-        style={{ y, rotate }}
-        src={img2}
-        alt="coin"
-        className="w-4 h-4 lg:w-12 lg:h-12  absolute  z-20"
-      />
-      <motion.img
-        style={{ y, rotate }}
-        src={img}
-        alt="coin"
-        className="w-4 h-4   absolute  z-20"
-      />
-      <motion.img
-        style={{ y, rotate }}
-        src={img}
-        alt="coin"
-        className="w-4 h-4 lg:w-14 lg:h-14 absolute  z-20"
-      />
-      <motion.img
-        style={{ y, rotate }}
-        src={img2}
-        alt="coin"
-        className="w-4 h-4 lg:w-12 lg:h-12 absolute  z-20"
-      /> */}
     </>
   );
 }

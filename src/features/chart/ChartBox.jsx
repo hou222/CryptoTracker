@@ -1,5 +1,4 @@
-import { Chart as ChartJS, defaults } from "chart.js/auto";
-import { useState } from "react";
+import { defaults } from "chart.js/auto";
 
 import { Line } from "react-chartjs-2";
 
@@ -18,7 +17,6 @@ function ChartBox({ prices, selected, setSelected, days }) {
         backgroundColor: "rgba(58, 128, 233, 0.267)",
         borderColor: "#3a80e9",
         tension: 0,
-        /* tension: 0.25, */
         pointRadius: 0,
       },
     ],
