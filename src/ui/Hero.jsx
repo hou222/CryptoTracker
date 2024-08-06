@@ -48,29 +48,21 @@ function Hero() {
               coinbase
             </div>
             <div className="text-[#ff007a] md:text-white flex items-center md:text-2xl">
-              <div
-                className={`bg-uni md:bg-uniWhite bg-no-repeat bg-cover w-6 h-6 md:w-8 md:h-8`}
-              ></div>
+              <div className="bg-uni md:bg-uniWhite bg-no-repeat bg-cover w-6 h-6 md:w-8 md:h-8"></div>
               UNISWAP
             </div>
             <div className="flex items-center gap-1 md:text-2xl md:font-semibold">
-              <div
-                className={`bg-sea md:bg-seaWhite bg-no-repeat bg-cover w-6 h-6 md:w-8 md:h-8`}
-              ></div>
+              <div className="bg-sea md:bg-seaWhite bg-no-repeat bg-cover w-6 h-6 md:w-8 md:h-8"></div>
               OpenSea
             </div>
             <div className="flex items-center gap-1 md:text-2xl">
-              <div
-                className={`bg-turbo md:bg-turboWhite bg-no-repeat bg-cover w-6 h-6 md:w-8 md:h-8`}
-              ></div>
+              <div className="bg-turbo md:bg-turboWhite bg-no-repeat bg-cover w-6 h-6 md:w-8 md:h-8"></div>
               <div className="flex flex-col">
                 <div className=" font-semibold pt-[6px]">turbotax</div>
               </div>
             </div>
             <div className="flex items-center md:text-2xl md:font-semibold">
-              <div
-                className={`bg-green-500 md:bg-white bg-no-repeat bg-cover w-6 h-6 md:w-8 md:h-8`}
-              ></div>
+              <div className="bg-green-500 md:bg-white bg-no-repeat bg-cover w-6 h-6 md:w-8 md:h-8"></div>
               H&R BLOCK
             </div>
           </div>
