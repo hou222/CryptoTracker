@@ -8,11 +8,11 @@ function FilterPlans() {
     setPlans((plans) => !plans);
   }
   return (
-    <div
-      className="flex flex-col justify-start items-center py-10"
-      id="pricing"
-    >
-      <div className="flex flex-col justify-start items-center gap-3 px-2 py-10">
+    <div className="flex flex-col justify-start items-center py-10">
+      <div
+        className="flex flex-col justify-start items-center gap-3 px-2 py-10"
+        id="pricing"
+      >
         <p className="text-white text-center text-6xl md:text-[85px] font-semibold md:font-bold flex flex-wrap justify-center gap-2">
           OUR
           <span className="bg-gradient-to-r from-cyan-500 to-blue-700 cursor-pointer text-transparent bg-clip-text">

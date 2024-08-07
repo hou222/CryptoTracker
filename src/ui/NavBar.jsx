@@ -1,3 +1,5 @@
+import { HashLink } from "react-router-hash-link";
+
 function NavBar({ isOpen, handleOpen }) {
   return (
     <nav
@@ -7,24 +9,24 @@ function NavBar({ isOpen, handleOpen }) {
     >
       <ul className="flex flex-col items-center gap-5 py-10 lg:flex-row lg:gap-11">
         <li className="cursor-pointer hover:text-white">
-          <a href="#" onClick={handleOpen}>
+          <HashLink to="/" onClick={isOpen && handleOpen}>
             Home
-          </a>
+          </HashLink>
         </li>
         <li className="cursor-pointer hover:text-white">
-          <a href="#market" onClick={handleOpen}>
+          <HashLink smooth to="/home/#market" onClick={isOpen && handleOpen}>
             Market
-          </a>
+          </HashLink>
         </li>
         <li className="cursor-pointer hover:text-white">
-          <a href="#pricing" onClick={handleOpen}>
+          <HashLink smooth to="/home/#pricing" onClick={isOpen && handleOpen}>
             Our Pricing
-          </a>
+          </HashLink>
         </li>
         <li className="cursor-pointer hover:text-white">
-          <a href="#pricing" onClick={handleOpen}>
+          <HashLink smooth to="/home/#pricing" onClick={isOpen && handleOpen}>
             Join
-          </a>
+          </HashLink>
         </li>
       </ul>
     </nav>
